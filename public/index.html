@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="expressApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Express</title>
+    <!-- Libraries -->
+    <script src="angular.min.js"></script>
+    <!-- Development -->
+    <script src="app.js"></script>
+
+  </head>
+  <body ng-controller="MainController">
+    <h1>HAPPY HAPPY HAPPY</h1>
+    Instructors:
+      <ul>
+        <li ng-repeat="instructor in instructors">
+          {{instructor}}
+        </li>
+      </ul>
+    Staff:
+     <ul>
+       <li ng-repeat="person in staff">
+         {{person}}
+       </li>
+     </ul>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+var express = require('express');
+var path = require('path');
+var app = express();
+
+var instructors = ["Millie", "Ryan", "Joel"];
+var staff = ["Fred", "Taylor", "Mark"];
+
+
+app.use(express.static('public'));
+
+app.get('/', function(request, response){
+  // test the server
+  // response.send('HEY THERE!');
+  response.sendFile(__dirname + '/public/index.html')
+});
+
+app.get('/instructors', function(request, response){
+  response.send(instructors);
+});
+
+app.get('/staff', function(request, response){
+  response.send(staff);
+})
+
+var server = app.listen(3000, function(){
+  var port = server.address();
+  console.log('Listening on port: ', port);
+});
